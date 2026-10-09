@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Packaged release artifacts
+/Biogate-linux-x86_64.tar.gz
