@@ -8,8 +8,8 @@ Python-based software to simulate both silicon-based and cell-based (biological)
 3. Open a terminal in the extracted folder—the folder containing the `Biogate` directory—and run:
 
    ```bash
-   chmod +x Biogate/Biogate
-   ./Biogate/Biogate
+   chmod +x Biogate
+   ./Biogate
    ```
 
 
