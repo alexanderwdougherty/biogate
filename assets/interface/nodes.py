@@ -5,8 +5,11 @@ from PySide6.QtGui import QBrush, QColor, QPen
 from PySide6.QtCore import Qt
 
 class LogicGateNode(QGraphicsRectItem):
-    def __init__(self, logic_gate: str, x: float, y: float):
-        super().__init__(0, 0, 100, 60)
+    logic_gate_width = 100
+    logic_gate_height = 60
+
+    def __init__(self, logic_gate: str, x: float, y: float, color: str = "#000000"):
+        super().__init__(0, 0, self.logic_gate_width, self.logic_gate_height)
         self.setPos(x, y)
         self.logic_gate = logic_gate
 
@@ -16,9 +19,4 @@ class LogicGateNode(QGraphicsRectItem):
         )
 
         self.setBrush(QBrush(QColor("#222222")))
-        self.setPen(QPen(QColor("#00aaaa")))
-
-        QGraphicsTextItem(logic_gate, self).setDefaultTextColor(Qt.GlobalColor.white)
-        QGraphicsTextItem(logic_gate, self).setPos(30, 18)
-
-
+        self.setPen(QPen(QColor(color)))
